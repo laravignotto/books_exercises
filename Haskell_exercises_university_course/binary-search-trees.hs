@@ -4,7 +4,7 @@ data BST a = Void | Node {
     } deriving (Eq, Ord, Read, Show)
 
 {- Example of a BST:
-let bst = Node 5 (Node 3 (Node 1 Void Void) (Node 4 Void Void)) (Node 8 Void Void) 
+bst = Node 5 (Node 3 (Node 1 Void Void) (Node 4 Void Void)) (Node 8 Void Void) 
 which has the following structure:
        5
       / \
@@ -102,3 +102,4 @@ annotate (Node x left right) =
       right_annotated = annotate right
       heightVal = 1 + max (height left_annotated) (height right_annotated)
    in Node (x, heightVal) left_annotated right_annotated
+

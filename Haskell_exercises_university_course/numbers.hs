@@ -16,3 +16,4 @@ binomial n k =
 {- 3. Write a function that calculates a list with all combinations on
 `n` elements. Use `map :: (a -> b) -> [a] -> [b]` -}
 listElem n l = map (binomial n) l 
+
