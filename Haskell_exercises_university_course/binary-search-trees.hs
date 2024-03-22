@@ -103,3 +103,37 @@ annotate (Node x left right) =
       heightVal = 1 + max (height left_annotated) (height right_annotated)
    in Node (x, heightVal) left_annotated right_annotated
 
+
+
+{- 10. Write a predicate (Boolean-valued function)
+`almostBalanced` to measure whether a binary tree has the
+following property: for each node the heights of the left and
+right children differ by at most 1. -}
+
+
+{- 11. Given the following definition of the abstract
+(polymorphic) data type Weighted Binary Search Tree which
+consists of a BST in which the height of the node itself is
+maintained in each node.
+date WBST a = Void | Node a Int (WBST a) (WBST a)
+Write an `insert` function that inserts a new value into a
+WBST. -}
+
+
+{- 12. Write a function `diff2next` which, given a binary search
+tree, constructs an (annotated) binary search tree of pairs
+where the first element of each pair is the element of the
+original tree while the second element is `Just(the difference
+compared to the next value)`, according to the ordering of the
+contained values, or `Nothing` for the node with the maximum
+value. For example,
+Node 4 Void (Node 7 (Node 5 Void Void) Void)
+returns the solution
+Node (4,Just 1) Void (Node (7,Nothing) (Node (5,Just 2) Void Void) Void).
+-}
+
+
+
+{- 13. Write a function that, given a BST, returns the list of
+elements obtained by visiting the level tree. -}
+
