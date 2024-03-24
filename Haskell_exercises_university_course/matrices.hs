@@ -1,6 +1,6 @@
-mymatrix = [[1,2,3],
-            [4,5,6],
-            [7,8,9]]
+matrix1 = [[1,2,3],
+           [4,5,6],
+           [7,8,9]]
 
 
 {- 1. Write a function `matrix_dim` which, given a matrix,
@@ -65,13 +65,13 @@ colMinMax' matrix =
 whether a (square) matrix is lower triangular. -}
 -- determines if a row (a list) belongs to a lower triangular
 -- matrix, given the row index `i`
-mymatrix5 = [[1, 0,0],
-             [2,-3,0],
-             [4, 5,6]]
+matrix5 = [[1, 0,0],
+           [2,-3,0],
+           [4, 5,6]]
 
-mymatrix5' = [[0, 0,1],
-              [2,-3,0],
-              [4, 5,6]]
+matrix5' = [[0, 0,1],
+            [2,-3,0],
+            [4, 5,6]]
 
 rowLowerTriangular i list =
   sum [x | (x, idx) <- zip list [0..], idx >= i] == 0
@@ -89,9 +89,9 @@ lowerTriangular' matrix =
 whether a (square) matrix is upper triangular. -}
 -- determines if a row (a list) belongs to a upper triangular
 -- matrix, given the row index `i`
-mymatrix6 = [[1, 5,4],
-             [0,-3,2],
-             [0, 0,6]]
+matrix6 = [[1, 5,4],
+           [0,-3,2],
+           [0, 0,6]]
 
 rowUpperTriangular i list =
   sum [ x | (x, idx) <- zip list [0..], idx <= i ] == 0
